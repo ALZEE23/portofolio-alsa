@@ -1,0 +1,15 @@
+.h1 {
+  color: #E195AB;
+}
+
+:global(.h2) {
+  color: #D76C82;
+}
+
+:global(.h3) {
+  color: #693a50;
+}
+
+:global(.center) {
+  color: #60323e;
+}
