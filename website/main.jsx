@@ -2,12 +2,14 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var style = require("./app.css");
 // var cihuy = require('./cihuy.jsx');
-import { cihuy, navbar } from "./component/Navbar.jsx";
+import { navbar, home } from "./component/Navbar.jsx";
 
 ReactDOM.render(
-  <div>
-    {navbar}
-    {cihuy}
+  <div className="leclerc">
+    <div className="charles">
+      {navbar}
+      {home}
+    </div>
   </div>,
   document.getElementById("root")
 );

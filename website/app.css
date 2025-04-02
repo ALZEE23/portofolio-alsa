@@ -1,6 +1,5 @@
-.h1 {
-  color: #E195AB;
-}
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 :global(.h2) {
   color: #D76C82;
@@ -14,8 +13,117 @@
   color: #60323e;
 }
 
-:global(.tengah){
+:global(.lando) {
   display: flex;
+  font-size: 20px;
+  color: #D76C82;
   width: 100%;
-  justify-content: center;
+  height: 20%;
+  justify-content: space-between;
+}
+
+:global(.parentbar) {
+  display: flex;
+  margin-top: 5px;
+  gap: 10px;
+  width: 100%;
+  height: 20%;
+}
+
+:global(.norris) {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+:global(.kotak) {
+  width: 25%;
+  height: 50%;
+  background-color: #60323e;
+  border-radius: 2px;
+}
+
+:global(.piastri) {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+:global(.button1) {
+  font-family: "Concert One", sans-serif;
+  background-color: #F7CA47;
+  color: black;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  top: 50px;
+  left: 45px;
+  position: relative;
+  transition: 0.2s;
+  width: 30%;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0px black;
+  opacity: 0.8;
+}
+
+:global(.button1):hover {
+  opacity: 1;
+}
+
+:global(.button1):active {
+  top: 4px;
+}
+
+:global(.leclerc) {
+  background-color: #FCEEE3;
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+:global(.charles) {  
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 12px;
+  padding: 1rem 4rem 3rem 4rem;
+}
+
+.bg { 
+  background-color: #FCEEE3;
+}
+
+:global(.paragraph) {
+  font-family: "Lexend", sans-serif;
+  top: 18px;
+}
+
+:global(.ptext) {
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+}
+
+:global(.title1) {
+  font-family: "Concert One", sans-serif;
+  letter-spacing: 2px;
+  font-size: 87px;
+  margin: 0;
+}
+
+:global(.oscar) {
+  width: 50%;
+}
+
+:global(.gambar){
+  align-self: center;
+  width: 10rem;
+  height: 10rem;
+}
+
+:global(.logo) {
+  font-family: "Concert One", sans-serif;
+  display: flex;
+  
 }
