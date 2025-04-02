@@ -13,3 +13,9 @@
 :global(.center) {
   color: #60323e;
 }
+
+:global(.tengah){
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
