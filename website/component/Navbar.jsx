@@ -3,9 +3,8 @@ var ReactDOM = require("react-dom");
 var style = require("../app.css");
 
 const cihuy = (
-  <div>
+  <div className="tengah">
     <h1 className={style.h1}>Hello World</h1>
-    <h2 className="center">Hello pack </h2>
   </div>
 );
 
