@@ -193,30 +193,30 @@ html {
   background-color: #FFFFFF;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
-  display: flex;
   height: 55%;
   width: 23%;
   border-radius: 5px;
+  padding: 10px;
 }
 
 :global(.box2) {
   background-color: #FFFFFF;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
-  display: flex;
   height: 55%;
   width: 23%;
   border-radius: 5px;
+  padding: 10px;
 }
 
 :global(.box3) {
   background-color: #FFFFFF;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
-  display: flex;
   height: 55%;
   width: 23%;
   border-radius: 5px;
+  padding: 10px;
 }
 
 :global(.container) {
@@ -227,15 +227,12 @@ html {
 }
 
 :global(.purple) {
-  width: 30%;
-  height: 13%;
+  width: 70px;
+  height: 70px;
   background-color: #91A7EB;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
-  position: relative;
   border-radius: 10px;
-  right: -25px;
-  top: 25px;
 }
 
 :global(.lat) {
@@ -243,27 +240,21 @@ html {
 }
 
 :global(.green) {
-  width: 30%;
-  height: 19%;
-  position: relative;
+  width: 70px;
+  height: 70px;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
   border-radius: 50%;
   background-color: #198279;
-  right: -25px;
-  top: 25px;
 }
 
 :global(.pink) {
-  width: 30%;
-  height: 19%;
-  position: relative;
+  width: 70px;
+  height: 70px;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
   border-radius: 50%;
   background-color: #E64C87;
-  right: -25px;
-  top: 25px;
 }
 
 :global(.tempat) {
