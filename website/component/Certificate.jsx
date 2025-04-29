@@ -1,13 +1,22 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
-var style = require("../app.css");
+import React from "react";
+import "../app.css";
 
-const certificate = (
-    <div id="certificate" className="serti">
-        <div className="tempat">
-            <div className="sertif1"></div>
+export default function Certificate() {
+  return (
+    <div id="certificate" className="certificate">
+      <div className="sertifikat-section">
+        <div className="terminal">
+          <div className="top-bar">
+            <div className="circles">
+              <div className="circle pink"></div>
+              <div className="circle yellow"></div>
+              <div className="circle warnaapasihini"></div>
+            </div>
+            <div className="title">~ emon</div>
+          </div>
+          <div className="content"></div>
         </div>
+      </div>
     </div>
-);
-
-export {certificate};
+  );
+}

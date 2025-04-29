@@ -1,19 +1,17 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
-var style = require("./app.css");
-import {navbar} from "./component/Navbar.jsx";
-import {home} from "./component/Home.jsx";
-import {about} from "./component/About.jsx";
-import {certificate} from "./component/Certificate.jsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./app.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-ReactDOM.render(
-  <div className="leclerc">
-    <div className="charles">
-      {navbar}
-      {home}
-      {about}
-      {certificate}
-    </div>
-  </div>,
-  document.getElementById("root")
+import Admin from "./page/Admin";
+import Mainpage from "./page/Mainpage";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Navbar />
+    <Routes>
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/" element={<Mainpage />} />
+    </Routes>
+  </BrowserRouter>
 );

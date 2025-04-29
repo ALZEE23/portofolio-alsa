@@ -1,7 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@font-face {
+  font-family: 'Object Sans';
+  src: url(./fonts/PPObjectSans-Heavy.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Object Sans Regular';
+  src: url(./fonts/PPObjectSans-Regular.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   scroll-behavior: smooth;
@@ -26,7 +38,7 @@ html {
 :global(.navbar) a {
   text-decoration: none;
   color: black;
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Object Sans';
 }
 
 :global(.home) {
@@ -37,7 +49,7 @@ html {
 }
 
 :global(.button1) {
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Object Sans';
   background-color: #F7CA47;
   color: black;
   border: none;
@@ -62,12 +74,12 @@ html {
   transform: translateY(4px);
 }
 
-:global(.leclerc) {
+:global(.line) {
   background-color: #FCEEE3;
   padding: 3rem 3rem 3rem 3rem;
 }
 
-:global(.charles) {  
+:global(.line1) {  
   border-style: solid;
   border-width: 3px;
   border-color: black;
@@ -91,8 +103,9 @@ html {
 }
 
 :global(.title1) {
-  font-family: "Archivo Black", sans-serif;
-  font-size: 65px;
+  font-family: 'Object Sans';
+  font-size: 70px;
+  letter-spacing: 3;
   margin: 0;
 }
 
@@ -107,7 +120,6 @@ html {
 }
 
 :global(.logo) {
-  font-family: "Concert One", sans-serif;
   display: flex;
 }
 
@@ -174,7 +186,9 @@ html {
 }
 
 :global(.button2) {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "REM", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
   width: 7rem;
   height: 2rem;
   border: 2px solid black;
@@ -235,10 +249,6 @@ html {
   border-radius: 10px;
 }
 
-:global(.lat) {
-  width: 100%;
-}
-
 :global(.green) {
   width: 70px;
   height: 70px;
@@ -257,19 +267,94 @@ html {
   background-color: #E64C87;
 }
 
-:global(.tempat) {
-  display: flex;
-  border-radius: 10px;
-  border: 2px solid black;
-  box-shadow: 4px 4px 0px black;
-  width: 90%;
-  height: 75%;
-  margin: 0 auto 5rem;
-  background-color: #D9D9D9;
+:global(.introduce) {
+  font-family: "Winky Sans", sans-serif;
+  margin-top: 35px;
+  font-size: 14px;
+  padding: 10px 15px;
+  line-height: 1.7;
 }
 
-:global(.initext) {
-  margin-top: 200px;
-  font-size: 5px;
-  color: #000;
+:global(.hobby) {
+  font-family: "Winky Sans", sans-serif;
+  margin-top: 35px;
+  font-size: 14px;
+  padding: 10px 15px;
+  line-height: 1.7;
+}
+
+:global(.motivasi) {
+  font-family: "Winky Sans", sans-serif;
+  margin-top: 35px;
+  font-size: 14px;
+  padding: 10px 15px;
+  line-height: 1.7;
+}
+
+:global(.terminal) {
+  border-radius: 0.75rem;
+  border: 3px solid black;
+  overflow: hidden;
+  height: 75%;
+  font-family: 'Object Sans';
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+:global(.top-bar) {
+  background-color: #ffffff;
+  border-bottom: 2px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:global(.circles) {
+  display: flex;
+  gap: 0.5rem;
+}
+
+:global(.circle) {
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid black;
+  border-radius: 9999px;
+  box-shadow: none;
+}
+
+:global(.circle.pink) {
+  background-color: #E64C87;
+}
+
+:global(.circle.yellow) {
+  background-color: #F3C743;
+}
+
+:global(.circle.warnaapasihini) {
+  background-color: #1F9F93;
+}
+
+:global(.title) {
+  font-weight: 700;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+:global(.content) {
+  background-color: #d3d3d3;
+  height: 100vh;
+}
+
+:global(.sertifikat-section) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

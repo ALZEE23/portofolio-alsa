@@ -43,6 +43,16 @@ module.exports = {
           name: '[path][name].[hash].[ext]',
         },
     },
+    {
+      test: /\.(ttf|otf|woff|woff2|eot)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+        },
+      },
+    },
     ]
   }
 };
