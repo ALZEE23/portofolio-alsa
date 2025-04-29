@@ -1,17 +1,35 @@
+const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
-  entry: './main.jsx',
+  mode: 'development',
+  entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/dev-server',
+    './main.jsx'
+  ],
   output: {
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'website')
+    ]
   },
   module: {
     rules:[
       {
-        test: /\.js[x]?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015', 'react']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       },
@@ -30,29 +48,46 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|png|svg)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 25000,
-        },
-    },
-    {
-        test: /\.(jpg|png|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
-    },
-    {
-      test: /\.(ttf|otf|woff|woff2|eot)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/',
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+              publicPath: '/images/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(ttf|otf|woff|woff2|eot)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+          },
         },
       },
-    },
     ]
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { 
+          from: path.resolve(__dirname, 'image'),
+          to: 'image'
+        }
+      ]
+    })
+  ],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './dist',
+    hot: true,
+    port: 8080,
+    open: true
   }
 };

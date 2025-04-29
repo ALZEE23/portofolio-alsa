@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function Admin() {
+const Admin = () => {
   return (
-    <div id="admin" className="admin">
-        <h1>cape</h1>
-      </div>
+    <div>
+      <h1>Admin Page</h1>
+    </div>
   );
-}
+};
+
+export default Admin;

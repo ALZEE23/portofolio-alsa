@@ -1,5 +1,6 @@
 import React from "react";
 import "../app.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -12,6 +13,7 @@ export default function Navbar() {
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#certificate">Certificate</a>
+          <Link to="/admin">Admin</Link>
         </div>
       </div>
     </div>

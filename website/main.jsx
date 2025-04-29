@@ -1,17 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./app.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Navbar from "./component/Navbar";
 
-import Admin from "./page/Admin";
-import Mainpage from "./page/Mainpage";
+import App from "./App";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/" element={<Mainpage />} />
-    </Routes>
-  </BrowserRouter>
+     <App />
+  </BrowserRouter>,
+  document.getElementById("root")
 );
